@@ -183,10 +183,3 @@ The application is deployed using modern cloud platforms:
 
 ---
 
-👨‍💻 AUTHOR DETAILS
-
-Name: (Your Name)
-Course: (Your Course)
-College: (Your College Name)
-
----
