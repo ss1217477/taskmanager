@@ -71,7 +71,6 @@ const Login = () => {
 
         {/* Demo credentials */}
         <div style={{ marginTop: 16, padding: 12, background: '#f8fafc', borderRadius: 8, fontSize: 12, color: 'var(--text-muted)' }}>
-          <strong>Demo:</strong> admin@taskflow.com / admin123 (Admin role)
         </div>
       </div>
     </div>
