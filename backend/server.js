@@ -18,10 +18,21 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true
+}));
+app.use(express.json());
+
+// ✅ ADD THIS HERE
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' });
+});
+
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/taskflow')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('✅ MongoDB connected'))
-  .catch(err => console.error('❌ MongoDB error:', err));
+  .catch(err => console.log('MongoDB connection failed'));
 
 // Routes
 app.use('/api/auth', authRoutes);
